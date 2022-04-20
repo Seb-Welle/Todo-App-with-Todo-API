@@ -5,7 +5,7 @@ const todoList = document.querySelector("#list");
 let todos = [];
 
 function loadTodos() {
-  fetch("http://localhost:4730/todos/")
+  fetch("http://localhost:3000/todos/")
     .then((response) => response.json())
     .then((todosFromApi) => {
       //console.log(todosFromApi);
@@ -45,7 +45,7 @@ todoList.addEventListener("change", (e) => {
     done: todoCheckboxChecked,
   };
 
-  fetch("http://localhost:4730/todos/" + todoId, {
+  fetch("http://localhost:3000/todos/" + todoId, {
     method: "PUT",
     headers: { "content-type": "application/json" },
     body: JSON.stringify(updatedTodo),
@@ -58,7 +58,7 @@ addTodoBtn.addEventListener("click", () => {
     description: newTodoText,
     done: false,
   };
-  fetch("http://localhost:4730/todos/", {
+  fetch("http://localhost:3000/todos/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -75,7 +75,7 @@ addTodoBtn.addEventListener("click", () => {
 removeDoneBtn.addEventListener("click", () => {
   todos.forEach((todos) => {
     if (todos.done) {
-      fetch("http://localhost:4730/todos/" + todos.id, {
+      fetch("http://localhost:3000/todos/" + todos.id, {
         method: "DELETE",
       });
     }
