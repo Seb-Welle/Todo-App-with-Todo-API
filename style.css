@@ -6,7 +6,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: "Roboto Serif", sans-serif;
+  font-family: sans-serif;
 }
 
 header {
@@ -16,7 +16,7 @@ header {
   align-items: center;
 }
 
-h1 {
+#todo-list-headline {
   font-family: "Lobster Two", sans-serif;
   color: white;
   font-size: 2.5rem;
@@ -25,4 +25,29 @@ h1 {
 
 .body {
   background-color: lightsalmon;
+  display: flex;
+  flex-direction: column;
+  justify-content: row;
+  align-items: center;
+  margin: 0;
+}
+
+.input-container {
+  width: 35ch;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#list {
+  border: 4px solid white;
+  overflow: auto;
+  width: 35ch;
+  height: 50ch;
+  list-style: none;
+}
+
+li {
+  margin-top: 0.2rem;
+  margin-left: -2rem;
 }
