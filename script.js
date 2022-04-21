@@ -20,7 +20,6 @@ function renderTodos() {
   todos.forEach((todos) => {
     const newLi = document.createElement("li");
     const text = document.createTextNode(todos.description);
-    newLi.appendChild(text);
 
     newLi.setAttribute("data-id", todos.id);
 
@@ -28,6 +27,8 @@ function renderTodos() {
     checkbox.type = "checkbox";
     checkbox.checked = todos.done;
     newLi.appendChild(checkbox);
+
+    newLi.appendChild(text);
 
     todoList.appendChild(newLi);
   });

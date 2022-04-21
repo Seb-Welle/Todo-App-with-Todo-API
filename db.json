@@ -2,12 +2,12 @@
   "todos": [
     {
       "description": "Learn HTML",
-      "done": false,
+      "done": true,
       "id": 1
     },
     {
       "description": "Learn CSS",
-      "done": false,
+      "done": true,
       "id": 2
     },
     {
